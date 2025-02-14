@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"https://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- MySQL JDBC Driver -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+        <!-- Database URL -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/demo</property>
+
+        <!-- Database Credentials -->
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Shanmukhasai43@</property>
+
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Connection Pool Settings (Optional) -->
+        <property name="hibernate.hikari.maximumPoolSize">10</property>
+        <property name="hibernate.hikari.minimumIdle">2</property>
+
+        <!-- Enable SQL Logging (For Debugging) -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+
+        <property name="hibernate.format_sql">true</property>
+		<mapping resource="Employee.hbm.xml"/>
+
+        <!-- Auto Table Creation -->
+
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate Mapping DTD 3.0//EN"
+ "https://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entities.Employee" table="emp">
+    <id name="empId" type="int">
+        <generator class="increment">
+            <param name="sequence">employee_seq</param>
+        </generator>
+    </id>
+    <property name="empName" column="empName" type="string"/>
+</class>
+
+</hibernate-mapping>
